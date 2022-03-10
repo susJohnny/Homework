@@ -27,7 +27,7 @@ class Astar:
         cost_so_far = np.zeros((graph.width, graph.height)) # cost matrix from start point to this point
         
         final_node = None
-        cnt=0;
+        cnt=0
         while not frontier.empty():
             cnt+=1
             element=frontier.get()
