@@ -83,7 +83,7 @@ class dynamic_window_approach:
     def vel_cost(self, vx, vy):
         # you should complete the function for question2
         # the cost function about the velocity cost (hint: maximize the velocity is better, you can use the norm of this velocity)
-        pass
+        return sqrt(vx**2+vx**2)
 
     def cost_to_goal(self, pre_traj, goal):
         # you should complete the function for question2
