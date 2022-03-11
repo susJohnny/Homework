@@ -75,22 +75,21 @@ class dynamic_window_approach:
         # The cost include three parts: (1) the cost related to velocity, the maximize velocity is better, 10%
         # (2) cost realted to the goal, the closer position to the goal is better, 30%
         # (3) cost related to the obstacle, move away from the obstacle is better, 40%
-        # print(goal_pose)
-        # print('you should complete the cost function')
-        # pass
-        cost=vel_cost_gain*self.vel_cost(vx,vy)+goal_cost_gain*self.cost_to_goal(pre_traj,goal_pose)+obstacle_cost_gain*self.cost_to_obstacle(pre_traj=pre_traj)
-        return cost
+
+        print('you should complete the cost function')
+        pass
+        # return cost
 
     def vel_cost(self, vx, vy):
         # you should complete the function for question2
         # the cost function about the velocity cost (hint: maximize the velocity is better, you can use the norm of this velocity)
-        return -sqrt(vx**2+vy**2)
+        pass
 
     def cost_to_goal(self, pre_traj, goal):
-
         # you should complete the function for question2
         # the closer position to the goal is better (hint: use the position of the final point in the pre_traj to judge. )
-        return sqrt((pre_traj[-1][0][0]-goal[0][0])**2+(pre_traj[-1][1][0]-goal[1][0])**2)
+
+        pass
         
 
     def cost_to_obstacle(self, pre_traj):
@@ -98,9 +97,7 @@ class dynamic_window_approach:
         # the cost to the avoid the obstacles, move away from the obstacle is better 
         # (hint: the minimum distance between the predicted trajectory and obstacle in grid map, 
         # you can use the below function point_to_obstalce to calculate the distance with each point)
-        if self.point_to_obstalce(pre_traj[-1])==0:
-            return 10000
-        return 0.1/(self.point_to_obstalce(pre_traj[-1])**3)
+        pass
 
         
     def point_to_obstalce(self, point):
